@@ -1,35 +1,39 @@
-from reddit_loader import scrape_top_posts_from_sub
+"""
+Ethan Price
+Section AC
+Driver file to analyze top posts
+from the r/TwoSentenceHorror subreddit using NLP
+techniques and generate figures
+"""
+
+
 from reddit_data import RedditData
 
 
-"""
-TODO:
-- Graph relationship between upvotes and sentiment
-- Calculate top word frequencies
-- Average number of words for top vs controversial?
-- Generate overall word cloud
-- Calculate most frequent part of speech
-- Word cloud of adjectives to show what's considered good horror adjectives
-- More unit tests :(
-- Tone angry, sad ?
-- Adjectives
-"""
-
-
 def main():
+    # Load CSVs
     short_horror = RedditData("post_data_top_1000.csv")
-    print(short_horror.avg_sentiment())
+    controversial = RedditData("post_data_controversial_1000.csv")
 
-    #short_horror.graph_score_vs_sentiment()
+    # Sentiment Analysis
+    print("Top Posts Average Sentiment:", short_horror.avg_sentiment())
+    print("Controversial Posts Average Sentiment:",
+          controversial.avg_sentiment())
 
-    short_horror.show_word_cloud()
+    short_horror.graph_score_vs_sentiment("score_vs_sentiment.png")
 
-    # short_horror.part_of_speech()
-    # short_horror.top_adjectives()
-    # short_horror.adjectives_word_cloud()
+    # Word Frequency Analysis
+    short_horror.create_word_cloud("all_wordcloud.png", "any")
+    short_horror.create_word_cloud("noun_wordcloud.png", "noun")
+    short_horror.create_word_cloud("adj_wordcloud.png", "adjective")
+    short_horror.create_word_cloud("verb_wordcloud.png", "verb")
 
-# 0.03665471503182279 top
-# 0.014906574114416501 controversial
+    # Word Count Analysis
+    short_horror.graph_score_vs_num_words("score_vs_num_words")
+
+    print("Top Posts Average Word Count:", short_horror.get_avg_word_len())
+    print("Controversial Posts Average Word Count:",
+          controversial.get_avg_word_len())
 
 
 if __name__ == "__main__":

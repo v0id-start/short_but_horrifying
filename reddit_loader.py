@@ -1,7 +1,7 @@
 """
 Ethan Price
 Section AC
-Uses the Reddit API PRAW to scrape metadata/content
+Uses the Reddit API PRAW to scrape metadata and content
 from the top posts of all time in a subreddit
 """
 
@@ -16,7 +16,7 @@ AGENT_NAME = 'Short Horror Scraper'
 
 # Subreddit Data
 NUM_POSTS = 1000
-FILE_NAME = "post_data.csv"
+FILE_NAME = "post_data_top_1000.csv"
 SUBREDDIT = "TwoSentenceHorror"
 EXCLUDED_FLAIRS = ["⭐ANNOUNCEMENT⭐"]
 
