@@ -10,9 +10,9 @@ import praw
 import pandas as pd
 
 # API Instance Information
-CLIENT_ID = 'BI7m1CCdauRcf87m2fzt1w'
-SECRET = 'N9cT733BnsEcbVlsNydU_5fTu8zbhQ'
-AGENT_NAME = 'Short Horror Scraper'
+CLIENT_ID = ''
+SECRET = ''
+AGENT_NAME = ''
 
 # Subreddit Data
 NUM_POSTS = 1000
