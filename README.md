@@ -24,3 +24,6 @@ To run reddit_loader.py to scrape posts:
 - SECRET is by 'secret',
 - and AGENT_NAME is the name of your app
 
+
+Common Nouns
+![Alt text](/noun_wordcloud.png?raw=true "")
