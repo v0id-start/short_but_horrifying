@@ -1,4 +1,9 @@
-Setup Instructions for Anaconda:
+## Utilizes NLP tools to analyze characteristics of stories from the r/TwoSentenceHorror subreddit.
+### TwoSentenceHorror is an open source community where users contribute stories that invoke feelings of horror in two sentences.
+
+<br>
+
+# Setup Instructions for Anaconda:
 1. Create a new Anaconda environment with Python version 3.8 (Anaconda version 4.8.3)
 2. Run the following commands in the anaconda environment to install the required packages
 
@@ -24,6 +29,22 @@ To run reddit_loader.py to scrape posts:
 - SECRET is by 'secret',
 - and AGENT_NAME is the name of your app
 
-
-Common Nouns
+## Frequent Nouns
 ![Alt text](/noun_wordcloud.png?raw=true "")
+
+
+## Frequent Verbs
+![Alt text](/verb_wordcloud.png?raw=true "")
+
+## Frequent Adjectives
+![Alt text](/adj_wordcloud.png?raw=true "")
+
+## Post Score vs Number of Words
+![Alt text](/score_vs_num_words.png?raw=true "")
+
+## Post Score vs Story Sentiment
+![Alt text](/score_vs_sentiment.png?raw=true "")
+
+
+
+
